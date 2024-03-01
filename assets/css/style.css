@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     border: none;
-    color: inherit;
+    color: #ededed;
+    text-align: center;
     text-decoration: none;
     background-color: none;
     box-sizing: border-box;
@@ -24,6 +25,7 @@ body {
 }
 
 body img {
+    margin: 16px 0;
     max-width: 100%;
     display: block;
 }
