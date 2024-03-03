@@ -48,6 +48,24 @@ input {
     -moz-appearance: textfield;
 }
 
+input.valid,
+body div > div label.valid {
+    color: #4caf50;
+}
+
+input.valid {
+    border: solid 2px #4caf50;
+}
+
+input.invalid,
+body div > div label.invalid {
+    color: #f44336;
+}
+
+input.invalid {
+    border: solid 2px #f44336;
+}
+
 input:focus,
 input:hover {
     border: solid 2px #ededed;
@@ -72,10 +90,20 @@ button:hover {
 }
 
 body div > div {
-    margin-bottom: 46px;
-    width: 100%;
+    position: relative;
+    margin: 0 auto 46px;
+    width: min-content;
     display: flex;
     justify-content: center;
+}
+
+body div > div label {
+    top: calc(100% + 4px);
+    left: 0;
+    position: absolute;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 2px;
 }
 
 label {
