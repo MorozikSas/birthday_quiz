@@ -31,7 +31,7 @@ $button.addEventListener('click', () => {
     formData.append('code', code)
     formData.append('action', action)
     fetch(
-        'https://megaborodun4ik.monster/html/api/v1/birthday_quiz/',
+        'https://megaborodun4ik.monster/api/v1/birthday_quiz/',
         {
             method: 'POST',
             body: formData
