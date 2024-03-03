@@ -26,8 +26,7 @@ $inputs.forEach(($input, key) => {
 $button.addEventListener('click', () => {
     const formData = new FormData()
     const code = parseInt([...$inputs].map($input => $input.value).join(''))
-    const action = 'megaborodun4ik'
-    // const action = window.location.pathname.slice(0, -1).split('/')[3]
+    const action = window.location.pathname.slice(0, -1).split('/')[3]
     formData.append('code', code)
     formData.append('action', action)
     fetch(
