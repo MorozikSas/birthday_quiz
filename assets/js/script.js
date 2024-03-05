@@ -31,7 +31,7 @@ $button.addEventListener('click', () => {
     const formData = new FormData()
     const code = parseInt([...$inputs].map($input => $input.value).join('')) || null
     const action = window.location.pathname.replace('index.html', '').slice(0, -1).split('/')
-    console.log(action)
+    const $result = document.querySelector('body div + div')
     formData.append('code', code)
     formData.append('action', action[action.length - 1])
     fetch(
@@ -44,14 +44,15 @@ $button.addEventListener('click', () => {
         .then(response => response.json())
         .then(data => {
             $inputs.forEach(($input, key) => {
-                data.status = JSON.parse(data.status)
+                data.status = data.status
                 $input.classList.add(`${data.status ? '' : 'in'}valid`)
             })
             $label.classList.add(`${data.status ? '' : 'in'}valid`)
             $label.innerText = `${data.status ? '' : 'не '}верно`
 
             if (data.status) {
-                window.location.href = 'answer.html';
+                $result.classList.add('open')
+                $result.querySelector('h2').innerText = data.botCode
             }
         })
 
