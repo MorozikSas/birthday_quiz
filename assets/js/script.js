@@ -52,7 +52,7 @@ $button.addEventListener('click', () => {
 
             if (data.status) {
                 $result.classList.add('open')
-                $result.querySelector('h2').innerText = data.botCode
+                $result.querySelector('h2').innerText = ` ${data.botCode}`
             }
         })
 
