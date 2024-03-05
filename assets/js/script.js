@@ -49,7 +49,11 @@ $button.addEventListener('click', () => {
             })
             $label.classList.add(`${data.status ? '' : 'in'}valid`)
             $label.innerText = `${data.status ? '' : 'не '}верно`
-        })
+
+            if (data.status === true) {
+                window.location.href = '/birthday_quiz/people/megaborodun4ik/answer.html';
+            }})
+
         .catch(error => {
             console.error('Error:', error)
         })
