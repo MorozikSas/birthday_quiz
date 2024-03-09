@@ -41,7 +41,7 @@ body {
 }
 
 body img {
-    margin: 36px 0;
+    margin: 36px auto;
     max-width: 100%;
     display: block;
 }
@@ -133,7 +133,7 @@ body div + div {
 }
 
 body div + div img {
-    margin: 12px 0;
+    margin: 24px auto;
 }
 
 body div + div h1 {
